@@ -32,23 +32,32 @@ namespace Competition.Pages
         #endregion
 
         ShareSkill shareSkillObj;
+        ManageListings manageListingObj;
         public ManageListings()
         {
             shareSkillObj = new ShareSkill();
         }
-        internal void EditListing()
-        {
-            shareSkillObj.EditShareSkill();
-        }
 
-        internal void AddListing()
+        public void AddListing()
         {
             shareSkillObj.EnterShareSkill();
         }
 
-        internal void DeleteListing()
+        public void ViewListing()
         {
-           
+           // manageListingObj.ViewListing();
         }
+
+        public void EditListing()
+        {
+            shareSkillObj.EditShareSkill();
+        }
+
+        public void DeleteListing()
+        {
+            manageListingObj.DeleteListing();
+        }
+
+
     }
 }

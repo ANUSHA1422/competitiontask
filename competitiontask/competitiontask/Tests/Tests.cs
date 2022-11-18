@@ -16,22 +16,29 @@ namespace Competition.Tests
         {
             manageListingObj = new ManageListings();
         }
-        [Test]
+        [Test, Order(1)]
         public void EnterShareSkill()
         {
             test = extent.CreateTest(TestContext.CurrentContext.Test.Name);
             manageListingObj.AddListing();
             verifyAddListing();
         }
+        [Test,Order(2)]
+        public void ViewListing()
+        {
+            test = extent.CreateTest(TestContext.CurrentContext.Test.Name);
+            manageListingObj.ViewListing();
+            verifyAddListing();
+        }
 
-        [Test]
+        [Test,Order(3)]
         public void EditListing()
         {
             test = extent.CreateTest(TestContext.CurrentContext.Test.Name);
             manageListingObj.EditListing();
             verifyEditListing();
         }
-        [Test]
+        [Test,Order(4)]
         public void DeleteListing()
         {
             test = extent.CreateTest(TestContext.CurrentContext.Test.Name);
@@ -48,6 +55,8 @@ namespace Competition.Tests
 
         public void verifyAddListing()
         {
+            test = extent.CreateTest(TestContext.CurrentContext.Test.Name);
+
             //Assert.AreEqual(epxectedResult, ActualResult, "expected result and actual result do not match");
 
         }
