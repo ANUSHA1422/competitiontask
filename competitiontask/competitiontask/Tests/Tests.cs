@@ -1,4 +1,5 @@
-﻿using Competition.Pages;
+﻿using Competition.Global;
+using Competition.Pages;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -27,14 +28,27 @@ namespace Competition.Tests
         public void EditListing()
         {
             test = extent.CreateTest(TestContext.CurrentContext.Test.Name);
+            manageListingObj.EditListing();
+            verifyEditListing();
+        }
+        [Test]
+        public void DeleteListing()
+        {
+            test = extent.CreateTest(TestContext.CurrentContext.Test.Name);
+            manageListingObj.DeleteListing();
+            verifyEditListing();
         }
 
+        public void verifyEditListing()
+        {
+            test = extent.CreateTest(TestContext.CurrentContext.Test.Name);
 
-
+        }
 
 
         public void verifyAddListing()
         {
+            //Assert.AreEqual(epxectedResult, ActualResult, "expected result and actual result do not match");
 
         }
 

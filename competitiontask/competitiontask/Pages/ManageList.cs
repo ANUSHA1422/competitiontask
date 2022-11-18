@@ -36,9 +36,19 @@ namespace Competition.Pages
         {
             shareSkillObj = new ShareSkill();
         }
+        internal void EditListing()
+        {
+            shareSkillObj.EditShareSkill();
+        }
+
         internal void AddListing()
         {
             shareSkillObj.EnterShareSkill();
+        }
+
+        internal void DeleteListing()
+        {
+           
         }
     }
 }

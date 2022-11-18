@@ -19,7 +19,7 @@ namespace Competition.Global
 
         public static string excelPath = System.IO.Directory.GetParent(@"../../../").FullName
             + Path.DirectorySeparatorChar + "TestLibrary/TestData/TestData.xlsx";
-        public static string AutoITScriptPath = @""; //Setup your AutoIT path
+        public static string AutoITScriptPath = @"C:\competitiontask\competitiontask\competitiontask\competitiontask\TestLibrary\TestData\FileUploadScriptau.exe"; //Setup your AutoIT path
         public static string ScreenshotPath = System.IO.Directory.GetParent(@"../../../").FullName
             + Path.DirectorySeparatorChar + "TestLibrary/Screenshots/";
         #endregion

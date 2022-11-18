@@ -1,4 +1,6 @@
-﻿using OpenQA.Selenium;
+﻿using Competition.Global;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +13,8 @@ namespace Competition.Pages
     public class ShareSkill
     {
         #region Page Objects for EnterShareSkill
+
+        private IWebElement btnShareSkill => driver.FindElement(By.LinkText("Share Skill"));
         //Title textbox
         private IWebElement Title => driver.FindElement(By.Name("title"));
 
@@ -144,7 +148,30 @@ namespace Competition.Pages
         #endregion
         public void EnterShareSkill()
         {
+            ExcelLib.PopulateInCollection(Base.ExcelPath, "ShareSkill");
+
+            btnShareSkill.Click();
+
+            //Enter title
+            Title.SendKeys(ExcelLib.ReadData(2, "Title"));
+
+            Description.SendKeys(ExcelLib.ReadData(2, "Description"));
+
+            CategoryDropDown.SendKeys(ExcelLib.ReadData(2, "Category"));
+
+            SubCategoryDropDown.SendKeys(ExcelLib.ReadData(2, "Subcategory"));
+
+            Tags.SendKeys(ExcelLib.ReadData(2, "Tags"));
+
+          
 
         }
+
+        public void EditShareSkill()
+        {
+
+        }
+
+        
     }
 }
