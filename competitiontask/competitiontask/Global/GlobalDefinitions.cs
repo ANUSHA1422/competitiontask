@@ -90,7 +90,7 @@ namespace Competition.Global
                                    where colData.colName == columnName && colData.rowNumber == rowNumber
                                    select colData.colValue).SingleOrDefault();
 
-                    //var datas = dataCol.Where(x => x.colName == columnName && x.rowNumber == rowNumber).SingleOrDefault().colValue;
+                   // var datas = dataCol.Where(x => x.colName == columnName && x.rowNumber == rowNumber).SingleOrDefault().colValue;
 
 
                     return data.ToString();

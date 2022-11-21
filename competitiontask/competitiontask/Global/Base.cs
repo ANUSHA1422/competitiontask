@@ -18,7 +18,7 @@ namespace Competition.Global
         public static string IsLogin = "true";
 
         public static string excelPath = System.IO.Directory.GetParent(@"../../../").FullName
-            + Path.DirectorySeparatorChar + "TestLibrary/TestData/TestData.xlsx";
+            + Path.DirectorySeparatorChar + "TestLibrary/TestData/TestData.xlsx"; /*"C:/competitiontask/competitiontask/competitiontask/competitiontask/TestLibrary/TestData/TestDataXlsx.xlsx";*/
         public static string AutoITScriptPath = @"C:\competitiontask\competitiontask\competitiontask\competitiontask\TestLibrary\TestData\FileUploadScriptau.exe"; //Setup your AutoIT path
         public static string ScreenshotPath = System.IO.Directory.GetParent(@"../../../").FullName
             + Path.DirectorySeparatorChar + "TestLibrary/Screenshots/";

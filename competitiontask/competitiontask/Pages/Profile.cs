@@ -126,9 +126,9 @@ namespace Competition.Pages
 
         #endregion
 
-        internal void EditProfile()
-        {
+        //internal void EditProfile()
+        //{
 
-        }
+        //}
     }
 }
